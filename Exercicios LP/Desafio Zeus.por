@@ -10,18 +10,21 @@
 programa 
 { 
 	real x,y
-	inteiro n
+	inteiro opcao
 	
 	funcao inicio () {
 		escreva("Digite um número: ")
 		leia(x)
 		escreva("Digite outro número: ")
 		leia(y)	
-
+	
+	se(x <0 ou y <0) {
+		escreva("Essa calculadora não aceita números negativos\n\n")
+	} senao{
 		escreva("Escolha o que você deseja fazer com esses números:\nDigite 1-para somar;\nDigite 2-para subtrair;\nDigite 3-para multiplicar;\nDigite 4-para dividir;\n")
-		leia(n)
+		leia(opcao)
           limpa()
-		escolha(n) {
+		escolha(opcao) {
 			caso 1:
 			  escreva("A soma desses números é ", x+y ,"\n")
 			pare
@@ -45,6 +48,7 @@ programa
 			caso contrario:
 			  escreva("Opa! Esse não é um número válido")		
 		}
+	 }
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -52,7 +56,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 776; 
+ * @POSICAO-CURSOR = 318; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
