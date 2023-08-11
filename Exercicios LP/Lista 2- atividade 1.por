@@ -8,11 +8,11 @@ onde você irá atribuir o número em questão.
 programa
 {
 	caracter resposta
-	const real UNIVERSO=1.618
+	inteiro universo=42
 	
 	funcao inicio()
 	{
-		escreva(UNIVERSO)
+		escreva(universo)
 
 		escreva("\nVocê sabe o que esse numero significa? Digite 's' para sim e 'n' para não\n")
 		leia (resposta)
@@ -27,11 +27,11 @@ programa
 		  pare
 		  
 		caso 'n':
-		  escreva("Este é o número de ouro, ele é a representação matemática da perfeição da natureza e do universo\n")
+		  escreva("Este é o número de referencia do livro O mochileiro da galaxia.\n")
 		  pare
 		
 		caso 'N':
-		  escreva("Este é o número de ouro, ele é a representação matemática da perfeição da natureza e do universo\n")
+		  escreva("Este é o número de referencia do livro O mochileiro da galaxia.\n")
 		  pare
 
 		  caso contrario:
@@ -45,7 +45,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 406; 
+ * @POSICAO-CURSOR = 947; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
