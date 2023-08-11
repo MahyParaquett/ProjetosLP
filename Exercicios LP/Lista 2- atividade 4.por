@@ -21,25 +21,22 @@ programa
 		escreva("Digite o valor do primeiro angulo: \n")
 		leia(c)
 
+		limpa()
 		soma= a+b+c
-		se(soma != 180){
+		enquanto(soma != 180){
+			se(soma != 180 ou a == 0 ou b == 0 ou c == 0){
 				escreva("Os angulos internos somados não correspondem a 180°, tente novamente!.\n\n")
-				pare
+			pare
 			}
-			se( ang1 == 0 ou ang2 == 0 ou ang3 == 0){
-				escreva("Nao é um triangulo, tente novamente!\n\n")
-				soma=+1
+		}
 				
-			} enquanto(soma != 180)
-			limpa()
-				
-			se(a<90 e b<90 e c<90) {
+			se(a<90 e a>0 e b<90 e b>0 e c<90 e c>0) {
 			  escreva("Esses angulos formam um triangulo acutangulo!\n")
 			} 
 			senao se(a==90 ou b==90 ou c==90 ) {
 				escreva("Esses angulos formam um triangulo retangulo!\n")
 				
-			} senao se(a>90 ou b>90 ou c>90) {
+			} senao se(a>90 ou b>90 ou c>90 e soma!=180) {
 				escreva("Esses angulos formam um triangulo obtusangulo!\n")
 			  } 
 	}
@@ -54,7 +51,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1109; 
+ * @POSICAO-CURSOR = 1280; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

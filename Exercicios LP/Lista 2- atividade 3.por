@@ -52,12 +52,18 @@ programa{
 		 		enquanto (resposta=="não" e valida==falso){
 					escolha(opcao) {
 						caso 1:
-							escreva("Aqui está a lista de produtos com estoque:")
+							escreva("Aqui está a lista de produtos com estoque:\n")
+							para(inteiro i=0;i<LINHA;i++){
+							escreva(matrizEstoque[i][0], "\t", matrizEstoque[i][1], "\n")
+							}
 							valida= verdadeiro
 							pare
 				
 						caso 2:
-							escreva("Aqui está a lista de produtos sem estoque:")
+							escreva("Aqui está a lista de produtos sem estoque:\n")
+							para(inteiro i=0;i<TAMANHO;i++) {
+							escreva(vetorItens[i], "\n")
+							}
 							valida= verdadeiro
 							pare
 						
@@ -67,7 +73,8 @@ programa{
 							se (resposta=="sim"){
 								escreva("Foi bom tem ter aqui, até a próxima!\n")
 		 					} senao se (resposta== "não") {
-								escreva("Volte ao menu\n") 
+								escreva("Reinicie o programa\n")
+								valida= verdadeiro 
 							  }
 							pare
 			
@@ -96,7 +103,7 @@ programa{
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2387; 
+ * @POSICAO-CURSOR = 2702; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

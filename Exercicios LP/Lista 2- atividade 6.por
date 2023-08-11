@@ -5,32 +5,37 @@ da soma.*/
 
 programa
 {
-	inteiro a, x=0, soma1,soma2,somaTotal
+	inteiro a, contador=0, soma1=0,soma2=0,somaTotal
 	
 	funcao inicio()
 	{
 		escreva("Digite um numero inteiro maior que 100: ")
 		leia(a)
 		limpa()
+		se(a<=100){
+			escreva("Você digitou um número inválido\n")
+		}senao{
+		
 		escreva("os três primeiros números são: ")
 		
-		para(inteiro i=100; i<=a; i++) {//varrer todos os numeros do intervalo
-			se(i%6==0 e x<=2) { //descobrir os multiplos e os 3 primeiros do intervalo (0,1 e 2)
+		para(inteiro i=1; i<=a; i++) {//varrer todos os numeros do intervalo
+			se(i%6==0 e contador<3) { //descobrir os multiplos e os 3 primeiros do intervalo (0,1 e 2)
 				escreva(" ", i)
-				soma1=+i //soma dos tres primeiros
-				x++ //contagem progressiva da posição de um em um
+				soma1 += i //soma dos tres primeiros
+				contador++ //contagem progressiva da posição de um em um
 			}
 		}
 		escreva("\nos três ultimos números são: ")
-		para(inteiro i=a; i>=100; i--) {//varrer todos os numeros do intervalo
-			se(i%6==0 e x>=1) { //descobrir os multiplos e os 3 ultimos do intervalo 
+		para(inteiro i=a; i>=0; i--) {//varrer todos os numeros do intervalo
+			se(i%6==0 e contador>0) { //descobrir os multiplos e os 3 ultimos do intervalo 
 				escreva(" ", i)
-				soma2=+i //soma dos tres ultimos
-				x-- //contagem regressiva da posição de um em um
+				soma2 += i //soma dos tres ultimos
+				contador-- //contagem regressiva da posição de um em um
 			}
 		}
 		somaTotal=soma1+soma2
 		escreva("\nA soma entre os três primeiros e os três ultimos números é: ", somaTotal, "\n")
+		}
 	}
 }
 
@@ -39,7 +44,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 388; 
+ * @POSICAO-CURSOR = 960; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
