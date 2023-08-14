@@ -3,20 +3,20 @@ realize a soma desses números. Encerre a execução quando um número
 negativo for digitado.*/
 programa
 {
-	inteiro n=0, soma=0
+	inteiro n=0, soma=0
 	
 	funcao inicio()
 	{
 		faca {
-		escreva("\nDigite um número:")
-		leia(n)
-		
-		soma += n 
-		escreva("\nA soma dos numeros é:",soma)	
-			
+			escreva("\nDigite um número:")
+			leia(n)
+		se(n>=0){
+			soma += n 
+		}
+			limpa()	
 		} enquanto(n>=0) 
 			
-		escreva("\nA soma dos numeros é:",soma-n)
+		escreva("\nA soma dos numeros é:",soma)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -24,7 +24,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 323; 
+ * @POSICAO-CURSOR = 303; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
